@@ -15,7 +15,7 @@ jobs:
         with:
           active_profiles: '["github"]'
           servers: '[{ "id": "github", "username": "BatyrYusuf", "password": "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" }]'
-          profiles:  '[{"id": "github", "repositories": { "id": "central", "url": "https://repo1.maven.org/maven2" }, { "id": "github", "url": "https://maven.pkg.github.com/BatyrYusuf/AutomationFramework", "snapshots": { "enabled": "true"}} }]'
+          profiles:  '[{"id": "github", "repositories": { "id": "github", "url": "https://maven.pkg.github.com/BatyrYusuf/AutomationFramework", "snapshots": { "enabled": "true"}} }]'
       - uses: actions/checkout@v3
       - name: Set up JDK 8
         uses: actions/setup-java@v3
