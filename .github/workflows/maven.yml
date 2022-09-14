@@ -13,8 +13,9 @@ jobs:
     steps:
       - uses: whelk-io/maven-settings-xml-action@v20
         with:
+          activeProfiles: ""
           servers: '[{ "id": "github", "username": "BatyrYusuf", "password": "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" }]'
-          repositories:  '[{ "id": "central", "url": "https://repo1.maven.org/maven2" }, { "id": "github", "url": "https://maven.pkg.github.com/CerenSuu/AutomationFramework", "snapshots": { "enabled": "true"}} ]'
+          profiles:  '[{"id": "github", "repositories": { "id": "central", "url": "https://repo1.maven.org/maven2" }, { "id": "github", "url": "https://maven.pkg.github.com/BatyrYusuf/AutomationFramework", "snapshots": { "enabled": "true"}} }]'
       - uses: actions/checkout@v3
       - name: Set up JDK 8
         uses: actions/setup-java@v3
