@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: whelk-io/maven-settings-xml-action@v20
         with:
-          activeProfiles: '["github"]'
+          active_profiles: '["github"]'
           servers: '[{ "id": "github", "username": "BatyrYusuf", "password": "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" }]'
           profiles:  '[{"id": "github", "repositories": { "id": "central", "url": "https://repo1.maven.org/maven2" }, { "id": "github", "url": "https://maven.pkg.github.com/BatyrYusuf/AutomationFramework", "snapshots": { "enabled": "true"}} }]'
       - uses: actions/checkout@v3
