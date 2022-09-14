@@ -13,8 +13,8 @@ jobs:
 
     steps:
       - uses: whelk-io/maven-settings-xml-action@v20
-          with:
-            servers: '[{ "id": "github", "username": "BatyrYusuf", "password": "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" }]'
+        with:
+          servers: '[{ "id": "github", "username": "BatyrYusuf", "password": "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" }]'
       - uses: actions/checkout@v3
       - name: Set up JDK 8
         uses: actions/setup-java@v3
