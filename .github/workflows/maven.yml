@@ -19,6 +19,8 @@ jobs:
           distribution: 'adopt'
           settings-path: ${{ github.workspace }}
           cache: maven
+      - name: clean build
+        run: mvn clean
       - name: move settings.xml file to ./m2 directory
         run: sudo mv /home/runner/work/automationproject/automationproject/settings.xml ~/.m2/
       - name: Build with Maven
