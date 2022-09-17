@@ -19,7 +19,7 @@ jobs:
           distribution: 'adopt'
           settings-path: ${{ github.workspace }}
           cache: maven
-      - name: find the path to the settings.xml
+      - name: sudo find the path to the settings.xml
         run: find / | grep settings.xml
       - name: Build with Maven
         run: mvn clean test -Pselenium-test --file pom.xml -s settings.xml
