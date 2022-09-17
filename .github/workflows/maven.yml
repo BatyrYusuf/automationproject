@@ -20,4 +20,4 @@ jobs:
           settings-path: ${{ github.workspace }}
           cache: maven
       - name: Build with Maven
-        run: mvn clean test -Pselenium-test --file pom.xml -s /home/runner/work/automationproject/automationproject/settings.xml
+        run: mvn clean test -Pselenium-test --file pom.xml -gs /home/runner/work/automationproject/automationproject/settings.xml
