@@ -16,6 +16,11 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.ey.framework</groupId>
+            <artifactId>automation-framework</artifactId>
+            <version>1.0.26</version>
+        </dependency>
     </dependencies>
 
     <build>
