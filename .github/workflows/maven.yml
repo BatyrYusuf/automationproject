@@ -19,9 +19,9 @@ jobs:
           distribution: 'adopt'
           settings-path: ${{ github.workspace }}
           cache: maven
-      - name: clean build
-        run: mvn clean
+      - name: create ./m2
+        run: mkdir ~/.m2
       - name: move settings.xml file to ./m2 directory
-        run: sudo mv /home/runner/work/automationproject/automationproject/settings.xml ~/.m2/
+        run:  mv /home/runner/work/automationproject/automationproject/settings.xml ~/.m2/
       - name: Build with Maven
         run: mvn clean test -Pselenium-test --file pom/pom.xml
