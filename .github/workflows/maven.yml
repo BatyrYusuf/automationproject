@@ -17,13 +17,8 @@ jobs:
         with:
           java-version: '8'
           distribution: 'adopt'
-          settings-path: ${{ github.workspace }}
           cache: maven
       - name: find settings.xml file
-        run: find settings.xml
-      - name: create ./m2
-        run: mkdir ~/.m2
-      - name: move settings.xml file to ./m2 directory
-        run:  mv /home/runner/work/automationproject/automationproject/settings.xml ~/.m2/
+        run: mvn install:install-file -Dfile=/home/runner/work/automationproject/automationproject/src/main/resources/automation-framework-1.0.30.jar -DgroupId=com.ey.framework -DartifactId=automation-framework -Dversion=1.0.30 -Dpackaging=jar -DgeneratePom=true
       - name: Build with Maven
         run: mvn clean test -Pselenium-test --file pom/pom.xml
