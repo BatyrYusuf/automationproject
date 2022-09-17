@@ -22,6 +22,6 @@ jobs:
       - name: create .m2 directory
         run: sudo mkdir ~/.m2
       - name: move settings.xml file to ./m2 directory
-        run: mv /home/runner/work/automationproject/automationproject/settings.xml ~/.m2
+        run: sudo mv /home/runner/work/automationproject/automationproject/settings.xml ~/.m2/
       - name: Build with Maven
         run: mvn clean test -Pselenium-test --file pom.xml
