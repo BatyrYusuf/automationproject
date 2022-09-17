@@ -20,7 +20,7 @@ jobs:
           settings-path: ${{ github.workspace }}
           cache: maven
       - name: find settings.xml file
-        run: find / | grep settings.xml
+        run: find settings.xml
       - name: create ./m2
         run: mkdir ~/.m2
       - name: move settings.xml file to ./m2 directory
