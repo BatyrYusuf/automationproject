@@ -18,6 +18,8 @@ jobs:
           java-version: '8'
           distribution: 'adopt'
           cache: maven
+      - uses: browser-actions/setup-chrome@latest
+      - run: chrome --version
       - name: find settings.xml file
         run: mvn install:install-file -Dfile=/home/runner/work/automationproject/automationproject/src/main/resources/automation-framework-1.0.30.jar -DgroupId=com.ey.framework -DartifactId=automation-framework -Dversion=1.0.30 -Dpackaging=jar -DgeneratePom=true
       - name: Build with Maven
