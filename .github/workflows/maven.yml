@@ -21,7 +21,8 @@ jobs:
       - uses: browser-actions/setup-chrome@latest
       - run: chrome --version
       - name: find settings.xml file
-        run: mvn install:install-file -Dfile= D:\a\automationproject\automationproject\src\main\resources\automation-framework-1.0.31.jar -DgroupId= com.ey.framework -DartifactId=automation-framework -Dversion= 1.0.31 -Dpackaging= jar -DgeneratePom= true
+        run: mvn install:install-file -Dfile=D:\a\automationproject\automationproject\src\main\resources\automation-framework-1.0.31.jar -DgroupId=com.ey.framework -DartifactId=automation-framework -Dversion=1.0.31 -Dpackaging=jar -DgeneratePom=true
+        shell: cmd
       - name: Build with Maven
         run: mvn clean test -Pselenium-test --file pom.xml
       - name: Download target for results
