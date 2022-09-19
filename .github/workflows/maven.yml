@@ -25,6 +25,7 @@ jobs:
       - name: Build with Maven
         run: mvn clean test -Pselenium-test --file pom.xml
       - name: Download target for results
+        if: always()
         uses: actions/upload-artifact@v3
         with:
           name: target
