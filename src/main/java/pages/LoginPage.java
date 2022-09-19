@@ -26,7 +26,8 @@ public class LoginPage extends CommonPage{
             username.sendKeys(Settings.Username);
             password.sendKeys(Settings.Password);
             loginButton.click();
-            Assert.fail();
+            ReportListener.fail("failed");
+            Assert.fail("failed");
 
 
         }catch(Exception e){
