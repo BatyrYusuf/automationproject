@@ -3,10 +3,10 @@ package pages;
 import com.ey.automation.config.Settings;
 import com.ey.automation.listener.ReportListener;
 import io.qameta.allure.Step;
-import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.testng.Assert;
 
 
 public class LoginPage extends CommonPage{
@@ -26,7 +26,7 @@ public class LoginPage extends CommonPage{
             username.sendKeys(Settings.Username);
             password.sendKeys(Settings.Password);
             loginButton.click();
-            Assert.assertTrue(false);
+            Assert.fail();
 
 
         }catch(Exception e){
