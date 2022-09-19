@@ -2,6 +2,7 @@ package pages;
 
 import com.ey.automation.config.Settings;
 import com.ey.automation.listener.ReportListener;
+import com.ey.automation.listener.TestListener;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,8 +27,8 @@ public class LoginPage extends CommonPage{
             username.sendKeys(Settings.Username);
             password.sendKeys(Settings.Password);
             loginButton.click();
-            ReportListener.fail("failed");
             Assert.fail("failed");
+            ReportListener.fail("failed");
 
 
         }catch(Exception e){
