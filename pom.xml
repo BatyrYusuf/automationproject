@@ -34,7 +34,7 @@
         <dependency>
             <groupId>com.ey.framework</groupId>
             <artifactId>automation-framework</artifactId>
-            <version>1.0.30</version>
+            <version>1.0.31</version>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
