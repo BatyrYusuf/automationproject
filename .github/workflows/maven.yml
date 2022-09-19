@@ -19,7 +19,7 @@ jobs:
           distribution: 'adopt'
           cache: maven
       - name: find path
-        run: find pom.xml
+        run: DIR
    #   - uses: browser-actions/setup-chrome@latest
    #   - run: chrome --version
         #  - name: find settings.xml file
