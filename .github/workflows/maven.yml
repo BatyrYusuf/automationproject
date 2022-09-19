@@ -18,17 +18,15 @@ jobs:
           java-version: '8'
           distribution: 'adopt'
           cache: maven
-      - name: find path
-        run: DIR
-   #   - uses: browser-actions/setup-chrome@latest
-   #   - run: chrome --version
-        #  - name: find settings.xml file
-        #  run: mvn install:install-file -Dfile=D:\home\runner\work\automationproject\automationproject\src\main\resources\automation-framework-1.0.31.jar -DgroupId=com.ey.framework -DartifactId=automation-framework -Dversion=1.0.31 -Dpackaging=jar -DgeneratePom=true
-        #  - name: Build with Maven
-      #    run: mvn clean test -Pselenium-test --file pom.xml
-        #  - name: Download target for results
-        #if: always()
-        #uses: actions/upload-artifact@v3
-          #with:
-          #name: target
-          #path: D:\home\runner\work\automationproject\automationproject\target
+      - uses: browser-actions/setup-chrome@latest
+      - run: chrome --version
+      - name: find settings.xml file
+        run: mvn install:install-file -Dfile=D:\a\automationproject\automationproject\src\main\resources\automation-framework-1.0.31.jar -DgroupId=com.ey.framework -DartifactId=automation-framework -Dversion=1.0.31 -Dpackaging=jar -DgeneratePom=true
+      - name: Build with Maven
+        run: mvn clean test -Pselenium-test --file pom.xml
+      - name: Download target for results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: target
+          path: D:\a\automationproject\automationproject\target
