@@ -20,7 +20,7 @@ jobs:
           cache: maven
       - uses: browser-actions/setup-chrome@latest
       - run: chrome --version
-      - name: find settings.xml file
+      - name: Upload Framework to local repisotory
         run: mvn install:install-file -Dfile=D:\a\automationproject\automationproject\src\main\resources\automation-framework-1.0.31.jar -DgroupId=com.ey.framework -DartifactId=automation-framework -Dversion=1.0.31 -Dpackaging=jar -DgeneratePom=true
         shell: cmd
       - name: Build with Maven
